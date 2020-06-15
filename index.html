@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sorting visualizer</title>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/font-awesome.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="row">
+            <div  class="col-md-3 " id="me">
+                <span id="openMenu"><i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                </span>
+                <div id="menu">
+                    <h4>Sorting Algo Visualizer</h4>
+                    <div  id="generateArray" >
+						<div  class="input-group input-group-sm mb-3">
+							<label><b>Size of Array : </b></label>
+							<input type="number" class="form-control" placeholder="number of elements" value="25" min="1" max="200" aria-describedby="inputGroup-sizing-sm">
+						</div>
+						<button  class="btn btn-default btn-sm" onclick="generateRandomArray()"><b>generate random array</b></button>
+						<button  id = "gendescarr" class="btn btn-default btn-sm" onclick="generateDescArray()"><b>generate descending array</b></button>
+						
+					</div>
+					<div id = "selection_btn">
+						<button id = "crbtn" class="btn btn-default btn-sm"  onclick="createOwnArray()"><b>Create Own Array</b></button>
+						<!-- <button id = "aprbtn" class="btn btn-default btn-sm"  onclick="appendToExistingArray()"><b>append To Existing Array</b></button> -->
+					</div>		
+					<div id="addToArray">
+						<label id = "l2" class="label label-danger" ><b>Add Element To array :</b></label>
+						<!-- <label id = "l3" class="label label-danger" ><b>Append To Existing Array :</b></label> -->
+						<div  class="input-group input-group-sm mb-3">
+							<input type="number" class="form-control" placeholder="enter elements" min="1" max="400" >
+						</div>
+						<label id = "l1"class="label label-danger" >*Please Enter positive integer</label>
+                        <button  class="btn btn-default btn-sm" onclick="addToArray()"><b>Add To array</b></button>
+                    </div>
+                    <div id="chooseSort">
+						<label class="label"><b>choose sorting algorithm : </b></label>
+                        <select >
+                                <option value="bubble">bubble sort</option>
+                                <option value="inhbubble">inhanced bubble sort</option>
+                                <option value="insertion">insertion sort</option>
+                                <option value="merge">merge sort</option>
+                                <option value="quick">quick sort</option>
+                                <option value="select">selection sort</option>
+                              
+                        </select>
+                        <button  class="btn btn-default btn-sm" onclick="sortArray()"><b>sort</b></button>
+                    </div>
+                    <div id="chooseSpeed">
+							<div  class="input-group input-group-sm mb-3">
+								<label><b>Speed : </b></label>
+								<input type="number" class="form-control" placeholder="time in ms" value="250" min="1" max="100" >
+							</div>
+                            <button  class="btn btn-default btn-sm"  onclick="setSpeed()"><b>set sorting speed</b></button>
+                            <h4></h4>
+                    </div>
+                   
+                </div>
+            </div>
+            <div id="container" class="col-md-8">
+        
+            </div>
+    </div>
+
+   
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/script.js"></script>
+    <script src="helperFunc.js"></script>
+    <script src="sort/bubbleSort.js"></script>
+    <script src="sort/inhancedbubbleSort.js"></script>
+    <script src="sort/mergeSort.js"></script>
+    <script src="sort/insertionSort.js"></script>
+    <script src="sort/quickSort.js"></script>
+    <script src="sort/selectionSort.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

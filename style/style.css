@@ -1,0 +1,66 @@
+*{
+    transition: all .2s ease-in-out;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+}
+.bar{
+    min-width: 10px;
+    border: 1px gray solid;
+    
+}
+body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#menu{
+   
+    height: 100vh;
+    position: relative;
+    left: 0;
+    border-right: 2px whitesmoke solid;
+    padding-top: 90px ;
+    padding-left: 30px ;
+}
+#openMenu{
+    position: absolute;
+    z-index: 99;
+    margin: 10px;
+    padding: 10px;
+    background: whitesmoke;
+}
+input {
+    margin:5px;
+    max-width: 100px;
+}
+#menu div{
+padding : 4px
+}
+select {
+padding: 10px;
+
+}
+select:hover{
+    
+    background: whitesmoke;
+}
+button, .btn, .btn-default{
+    display: block;
+    margin: 10px;
+    margin-left: 0;
+    min-width: 70px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background: whitesmoke;
+}
+
+bar:hover{
+	display : 'height';
+}
